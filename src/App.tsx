@@ -23,6 +23,7 @@ class App extends React.Component<IComponentProps, IComponentState> {
       <div className="App">
         <header className="App-header">
           <wc-menu-button
+            is-open={this.state.menuIsOpen}
             ref={(menuButton: Components.WcMenuButton) => {
               if (menuButton) {
                 menuButton.isOpenChangedFunc = this.handleMenuOpenChanged;
