@@ -4,9 +4,5 @@ import App from "./App";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 
-import { defineCustomElements } from "wc-menu-button/dist/loader";
-
 ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
 registerServiceWorker();
-
-defineCustomElements(window);
