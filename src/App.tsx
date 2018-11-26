@@ -23,6 +23,8 @@ class App extends React.Component<IComponentProps, IComponentState> {
     return (
       <div className="App">
         <header className="App-header">
+          {/* Using ref inline callback to keep things simple, beware of caveats:
+           https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs */}
           <wc-menu-button
             is-open={this.state.menuIsOpen}
             ref={(menuButton: Components.WcMenuButton) => {
