@@ -2,8 +2,6 @@
 
 A sample React app, written in Typescript (using [create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript)), that consumes [a web component](https://github.com/wes566/wc-menu-button).
 
-Complete with typings for the web component (thanks to [Stencil](https://stenciljs.com)).
-
 ## [Demo](https://react-ts-web-component.netlify.com)
 
 ## Steps to consume the web component in react typescript app
