@@ -39,7 +39,9 @@ class App extends React.Component<IComponentProps, IComponentState> {
           The menu is {this.state.menuIsOpen ? "open" : "closed"}
         </p>
         <footer>
-          <img width="50" src={logo} alt="logo" />
+          <a href="https://github.com/wes566/sample-react-ts-consumes-web-component">
+            <img width="50" src={logo} alt="logo" />
+          </a>
         </footer>
       </div>
     );
