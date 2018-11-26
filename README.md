@@ -2,6 +2,8 @@
 
 A sample React app, written in Typescript (using [create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript)), that consumes [a web component](https://github.com/wes566/wc-menu-button).
 
+The [master](https://github.com/wes566/sample-react-consumes-web-component/tree/master) branch uses NPM and `defineCustomElements` to install the web component, and the [script-tag](https://github.com/wes566/sample-react-consumes-web-component/tree/script-tag) branch uses a `<script>` tag to install the web component.
+
 ## [Demo](https://react-ts-web-component.netlify.com)
 
 ## Steps to consume the web component in react typescript app
