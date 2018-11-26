@@ -27,11 +27,9 @@ defineCustomElements(window);
 3. Declare your web component typings (you can use [a declarations file](src/declarations.d.ts)) so TS doesn't complain when you use it in your TSX code.
 
 ```ts
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "wc-menu-button": React.ClassAttributes<Components.WcMenuButton>;
-    }
+declare namespace JSX {
+  interface IntrinsicElements {
+    "wc-menu-button": any;
   }
 }
 ```
