@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Components } from "wc-menu-button/dist/types/components";
 import "./App.css";
+import logo from "./logo.svg";
 
 // tslint:disable-next-line:no-empty-interface
 interface IComponentProps {}
@@ -37,6 +38,9 @@ class App extends React.Component<IComponentProps, IComponentState> {
         <p className="App-intro">
           The menu is {this.state.menuIsOpen ? "open" : "closed"}
         </p>
+        <footer>
+          <img width="50" src={logo} alt="logo" />
+        </footer>
       </div>
     );
   }
