@@ -8,35 +8,23 @@ The [master](https://github.com/wes566/sample-react-ts-consumes-web-component/tr
 
 ## Steps to consume the web component in react typescript app
 
-1. NPM install the web component
+1. Add a script tag in the [index.html](public/index.html) file.
 
-```bash
-npm install wc-menu-button --save
+```html
+<script src="https://unpkg.com/wc-menu-button/dist/wc-menu-button.js"></script>
 ```
 
-2. Add a call to `defineCustomElements` in the [index.tsx](src/index.tsx) file.
-
-```tsx
-import { defineCustomElements } from "test-components/dist/loader";
-.
-.
-.
-defineCustomElements(window);
-```
-
-3. Declare your web component typings (you can use [a declarations file](src/declarations.d.ts)) so TS doesn't complain when you use it in your TSX code.
+2. Declare your web component typings (you can use [a declarations file](src/declarations.d.ts)) so TS doesn't complain when you use it in your TSX code.
 
 ```ts
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "wc-menu-button": React.ClassAttributes<Components.WcMenuButton>;
-    }
+declare namespace JSX {
+  interface IntrinsicElements {
+    "wc-menu-button": any;
   }
 }
 ```
 
-4. Add the element to your TSX
+3. Add the element to your TSX
 
 ```tsx
 render() {
