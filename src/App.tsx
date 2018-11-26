@@ -23,6 +23,8 @@ class App extends React.Component<IComponentProps, IComponentState> {
     return (
       <div className="App">
         <header className="App-header">
+          {/* Using ref inline callback to keep things simple, beware of caveats:
+           https://reactjs.org/docs/refs-and-the-dom.html#caveats-with-callback-refs */}
           <wc-menu-button
             is-open={this.state.menuIsOpen}
             ref={(menuButton: Components.WcMenuButton) => {
@@ -39,7 +41,9 @@ class App extends React.Component<IComponentProps, IComponentState> {
           The menu is {this.state.menuIsOpen ? "open" : "closed"}
         </p>
         <footer>
-          <img width="50" src={logo} alt="logo" />
+          <a href="https://github.com/wes566/sample-react-ts-consumes-web-component">
+            <img width="50" src={logo} alt="logo" />
+          </a>
         </footer>
       </div>
     );
